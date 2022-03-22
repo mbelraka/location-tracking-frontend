@@ -1,27 +1,16 @@
-# LocationTracking
+# Location Tracking Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This application was done as the client for location tracking. The application was built using architectural standards such as: 
 
-## Development server
+- SOLID: 
+  - Single Responsibility: Every file should be doing only one function, markup for markups, styles for styles and ts for coding. No inline styling. No logic in template...etc.
+  -  Open for extension / closed for modification: The application should be fully configurable. The parameters are in docs that could be later connected to a content management system later also. Also, the app was done using different modules that could be taken into other applications and also be lazy loaded 
+  -  Liskov Substitution: All the application following a hierarchy that works for it. 
+  -  Interface: Joint logic among classes are introduced in different elements that are being implemented by them
+  -  Dependency injection: All the injectables are done as one element provifded in root and incjected to all elements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Atomic Design: The element doesn't use just one element, but a container including inside it another atomic components that could be re-used in order to reduce the amount of elements being loaded
+- Material Design: it applies material design rules.
+- State Management: The application uses observables in order to keep the real-time elements
+- Responsiveness: The application should work for all sizes
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
