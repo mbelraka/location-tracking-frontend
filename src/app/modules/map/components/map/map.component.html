@@ -1,0 +1,20 @@
+<div class="full-container">
+  <ng-container [ngTemplateOutlet]="(mapLoaded$ | async) ? content :  loading"></ng-container>
+</div>
+
+
+<ng-template #content>
+  <google-map @fadeInOutAnimation (mapClick)="addLandmark($event)">
+    <map-marker
+      *ngFor="let landmark of landmarks$ | async"
+      [position]="landmark"
+    >
+    </map-marker>
+  </google-map>
+</ng-template>
+
+<ng-template #loading>
+  <div fxLayout="1 1 auto" fxLayoutAlign="center center" class="loader">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>
